@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+/* eslint-disable @next/next/no-img-element */
 export default function MiniPost() {
   const posts: { name: string; imgSrc: string }[] = [
     {
@@ -20,7 +19,7 @@ export default function MiniPost() {
   ];
   return (
     <>
-      <Link href="/blog/view/1" className="mini-post-wrapper">
+      <div className="mini-post-wrapper" data-testid="hp-mini-post">
         <img src="/breakfast.jpeg" alt="breakfast ideas" />
         <div>
           <p className="post-title">Healthy Ideas</p>
@@ -38,7 +37,7 @@ export default function MiniPost() {
             dicta sunt explicabo.
           </p>
         </div>
-      </Link>
+      </div>
       <div className="post-img-carousel">
         {posts.map((post, index) => (
           <img key={index} src={post.imgSrc} alt={post.name}></img>

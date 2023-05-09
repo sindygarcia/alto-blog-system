@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function MainMenu() {
   return (
-    <div className="main-menu-wrapper">
+    <div className="main-menu-wrapper" data-testid="main-menu">
       <ul>
         <li>
           <Link href="/">Home</Link>

@@ -1,34 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+```bash
+  npm install
+```
+
+Start the server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run Tests:
+```bash
+npm run test
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Navigate to: http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Task Requirements
+1. Create a micro-CMS system for a personal use blog using React JS and local storage.
 
-## Learn More
+- Follow Atomic design to create the components and pages.
+- Provide the atomic design organization of the site.
+- The site should look something like the image above. No sign-in or sign-up actions are required.
+- No resources such as images or video uploads are required. This is a simple test, just use a CDN of your choice or copy the image’s URL from somewhere else.
+- Videos? Youtube, of course :)
+- Text content? Loren ipsum https://www.lipsum.com/
+- Please consider including tests in your code.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+2. Develop the following required pages and React JS components for the blog
+- Blog’s logo: A Simple component to render the blog's logo.
+- Main menu: A list of the site sections.
+  * Home
+  * About
+  * Blog
+  * Contact: Simply render contact information.
+- Image hero component: Image component to render the site's hero image.
+- Search bar: Searches the list of posts by name and returns a list of the post-matching strings entered. It should be an Auto-complete component. When clicking on one element the corresponding blog post gets loaded on the page.
+- Post-creation/edition component: No WYSIWYG required, simple HTML post formatted is ok.
+- Post-reading view page: Page to visualize the post's content.
+- Post creation page: Form enter/edit post-HTML content.
+- Posts list: Page to visualize all of the blog posts. Also, include a “add post” button here.

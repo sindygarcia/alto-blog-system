@@ -35,7 +35,6 @@ export default function PostForm({ post = null }: { post: IPost | null }) {
   };
 
   useEffect(() => {
-    console.log(post);
     if (post) {
       setName(post.name);
       setContent(post.content);
@@ -43,7 +42,7 @@ export default function PostForm({ post = null }: { post: IPost | null }) {
   }, [post]);
 
   return (
-    <Box component="form" className="post-form">
+    <Box component="form" className="post-form" data-testid="post-form">
       <div>
         <TextField
           label="Name"
@@ -70,6 +69,7 @@ export default function PostForm({ post = null }: { post: IPost | null }) {
       </div>
       <div style={{ width: "50%", textAlign: "end" }}>
         <Button
+          data-testid="cancel-btn"
           variant="outlined"
           onClick={onCancel}
           disabled={!name && !content}
@@ -78,6 +78,7 @@ export default function PostForm({ post = null }: { post: IPost | null }) {
           Cancel
         </Button>
         <Button
+          data-testid="save-btn"
           variant="contained"
           onClick={onSavePost}
           disabled={!name && !content}

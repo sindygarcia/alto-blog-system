@@ -1,7 +1,7 @@
 import HeroImage from "../components/heroImage";
 import MiniPost from "../components/miniPost";
 
-export default function HomePage() {
+const HomePage: React.FC<{}> = () => {
   return (
     <div className="home-page-container">
       <div>
@@ -41,4 +41,6 @@ export default function HomePage() {
       </div>
     </div>
   );
-}
+};
+
+export default HomePage;

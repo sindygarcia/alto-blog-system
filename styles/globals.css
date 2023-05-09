@@ -99,8 +99,8 @@ main {
 .nav-bar-container {
   display: flex;
   justify-content: space-between;
-  padding: 10px 16px;
-  align-items: flex-end;
+  padding: 4px 16px;
+  align-items: center;
   border-bottom: 1px solid lightgrey;
 }
 
